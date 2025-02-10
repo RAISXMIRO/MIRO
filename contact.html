@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-grid.css.map">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="icon" href="logor.png">
+
+
+    <title>Dermo Contact</title>
+</head>
+<body>
+    <header>
+        <div class="lgandnav">
+            <div class="hdd">
+        <div id="burger" onclick="enable()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <nav class="nav" id="nav">
+    
+            <li>
+                <a href="homepage.html">Home</a>
+            </li>
+            <li>
+                <a href="Services.html">Services</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+    
+    
+        </nav>
+    </div>
+        <div class="logo">
+            <img class="logos" src="logor.png" width="70px">
+        </div>
+    
+    </div>
+    <script>
+        const enable = (e) => {
+               document.getElementById('burger').classList.toggle("open");
+               document.getElementById("nav").classList.toggle("nav-open");
+           };
+   </script>
+   <div class="elmor">
+   <p class="hilo">Hi dear <span>customer</span></p>
+   <div class="rais">
+   <p class="rem">Thank you for <span class="phrase" id="phrase"></span> our service</p>
+</div>
+   <script>
+    var words = ["Choosing","Enjoying"];
+    var index = 0;
+  
+    function writeWord() {
+      var phrase = document.getElementById("phrase");
+      var word = words[index];
+      var length = word.length;
+      var i = 0;
+  
+      function addLetter() {
+        if (i < length) {
+          phrase.innerHTML += word[i];
+          i++;
+          setTimeout(addLetter, 100);
+        } else {
+          setTimeout(eraseWord, 1000);
+        }
+      }
+  
+      function eraseWord() {
+        if (phrase.innerHTML.length > 0) {
+          phrase.innerHTML = phrase.innerHTML.slice(0, -1);
+          setTimeout(eraseWord, 100);
+        } else {
+          index = (index + 1) % words.length;
+          setTimeout(writeWord, 1000);
+        }
+      }
+  
+      addLetter();
+    }
+  
+    window.onload = writeWord;
+  </script>
+  <div class="o">
+  <a class="oo" href="#" id="scrollDown">Click here dear !</a>
+</div>
+  <script>
+    const scrollDown = document.querySelector('#scrollDown');
+
+scrollDown.addEventListener('click', (event) => {
+  event.preventDefault();
+  window.scrollBy({
+    top: 652,
+    left: 0,
+    behavior: 'smooth'
+  });
+});
+   </script>
+   </div>
+    </header>
+    <div class="gag container-fluid">
+    <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 elmatador">
+          <p class="ctn"><span>Contact</span> us</p>
+          <p class="abt">About our service :</p>
+          <p class="par">Immersed in an immersive experience at the heart of Moroccan tradition, <span>DermoSPA</span> will take you on a journey through the tale of One Thousand and One Nights of <span>Our service</span></p>
+          <p class="loc"><span><i class="fa-solid fa-location-dot"></i></span> Our Location:</p>
+          <p class="desloc">Route d'XXXXXX, Lotissement XXXXXXX immeuble N°XXXX, Magasin N°XXXXX, XXXXX City</p>
+          <p class="clock"><span><i class="fa-regular fa-clock"></i></span> Opening hours</p>
+          <p class="clockdes">Tous les jours : 10h-22h</p>
+          <p class="house"><span><i class="fa-regular fa-house"></i></span> Contact</p>
+          <p class="homedes">Phone: +2125XXXXXXXX/+2126XXXXXXXX</p><p class="homedes">Email:contactus@mail.com</p>
+        </div>
+      </div>
+        <div class="col-lg-6 col-md-12 mooto">
+            <div class="text-center">
+            <p class="type">Type your message :</p>
+            <textarea class="message" id="message" name="message" placeholder="It was really a perfect experience !"></textarea><br>
+            <button class="send" id="send-btn">Send</button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        const sendButton = document.getElementById("send-btn");
+      const number = "+212626151631"; // Remplacez ce numéro par votre propre numéro
+      
+      sendButton.addEventListener("click", () => {
+        const message = document.getElementById("message").value;
+      
+        // Vérifie que le champ de message est rempli avant d'envoyer le message
+        if (message) {
+          // Redirige vers l'URL WhatsApp Web avec le numéro et le message
+          window.open(`https://web.whatsapp.com/send?phone=${encodeURIComponent(number)}&text=${encodeURIComponent(message)}`, "_blank");
+        } else {
+          alert("Veuillez entrer un message.");
+        }
+      });
+      
+      
+      </script>
+
+<div class="lololo">
+
+<p>click <a href="#" target="_blank" style="color: blueviolet;">here</a> to see our Location</p>
+</div>
+</div>
+
+<footer>
+  <div class="container-fluid">
+          <div class="logor"><img src="logor.png" width="150px"></div>
+          <h1 class="footr">Waiting For Your Visit</h1>
+          <p class="infos">Important Informations :</p>
+          <div class="alll">
+            <div class="Horaire"><p class="rol"><i class="fa-regular fa-clock fa-shake"></i> From **:** To **:**</p></div>
+            <div class="loc l"><p class="rol"><i class="fa-solid fa-location-dot fa-beat-fade"></i> Rue ******** N° **</p></div>
+            <div class="mail l"><p class="rol"><i class="fa-regular fa-envelope fa-bounce"></i> ContactEx@gmail.com</p></div>
+            <div class="phone l"><p class="rol"><i class="fa-solid fa-phone fa-shake"></i>+2125********</p></div>
+          </div>
+        <div class="mimi">
+          <div class="allll">
+            <div class="lol">
+            <div class="Horaire"><p class="rol"><i class="fa-regular fa-clock fa-shake"></i> From **:** To **:**</p></div>
+            <div class="loc"><p class="rol"><i class="fa-solid fa-location-dot fa-beat-fade"></i> Rue ******** N° **</p></div>
+          </div>
+          <div class="lolo">
+            <div class="mail"><p class="rol"><i class="fa-regular fa-envelope fa-bounce"></i> ContactEx@gmail.com</p></div>
+            
+          <div class="phone"><p class="rol"><i class="fa-solid fa-phone fa-shake"></i>+2125********</p></div>
+          </div>
+        </div>
+        </div>
+        
+        
+          <p class="rol f"><i class="fa-regular fa-clock fa-shake"></i> From **:** To **:**</p>
+          <p class="rol f"><i class="fa-solid fa-location-dot fa-beat-fade"></i> Rue ******** N° **</p>
+          <p class="rol f"><i class="fa-regular fa-envelope fa-bounce"></i> ContactEx@gmail.com</p>
+          <p class="rol f"><i class="fa-solid fa-phone fa-shake"></i>+2125********</p><br><br><br>
+        <div class="lon"></div>
+          <p class="copy">2025 <a href="#" target="_blank">Miro</a> Copyright © all rights reserved</p>
+        <br>
+      </div>
+      </footer>
+    
+</body>
+</html>

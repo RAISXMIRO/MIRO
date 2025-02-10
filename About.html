@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/About.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha2-dist/css/bootstrap-grid.min.css">
+    <link rel="icon" href="logor.png">
+    <title>About-Us</title>
+</head>
+<body>
+    <header>
+        <div class="lgandnav">
+            <div class="hdd">
+        <div id="burger" onclick="enable()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <nav class="nav" id="nav">
+    
+            <li>
+                <a href="homepage.html">Home</a>
+            </li>
+            <li>
+                <a href="Services.html">Services</a>
+            </li>
+            <li>
+                <a href="About.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+    
+    
+        </nav>
+    </div>
+        <div class="logo">
+            <img class="logos" src="logor.png" width="70px">
+        </div>
+    
+    </div>
+    <script>
+        const enable = (e) => {
+               document.getElementById('burger').classList.toggle("open");
+               document.getElementById("nav").classList.toggle("nav-open");
+           };
+   </script>
+    <div class="container ctnun">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mala">
+                <h1 class="wlc">Welcome To DermoSpa : </h1>
+                <p class="abt">DermoSPA is a unique space in XXXX, <span>dedicated to beauty</span>, for both men and women. With a quiet location near the city center, DermoSPA is the perfect place to restore the balance of your body and mind. <span>Disconnect</span> from the outside world and embark on a total relaxation experience by enjoying a <span>traditional Moroccan hammam</span>, an essential oil massage, or an organic skincare treatment. Other services such as hairstyling, beauty treatments, and bridal services are also available. Our<span> professional</span> team is dedicated to meeting your requests and making your wellness break an unforgettable experience. Here, you can rediscover a sense of calm, get to know yourself, listen to your body, and simply let yourself live.</p>
+            </div>
+            <div class="col-lg-6 col-md-12 vivo">
+                <div class="slideshow-container">
+                    <div class="slideshow-image fade">
+                      <img class="image" src="a3xab.jpg" alt="image1" width="300px" height="400px">
+                    </div>
+                    
+                    <div class="slideshow-image fade">
+                      <img class="image" src="pexels-anna-tarazevich-6560282.jpg" alt="image2" width="300px" height="400px">
+                    </div>
+                    
+                    <div class="slideshow-image fade">
+                      <img class="image" src="sorra.jpg" alt="image3" width="300px" height="400px">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideshow-image");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.opacity = "0";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active-dot");
+  }
+  slides[slideIndex-1].style.opacity = "1";
+  dots[slideIndex-1].classList.add("active-dot");
+}
+
+    </script>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 low">
+                    <p class="tpgdesc">At your Spa, you'll experience pure relaxation and rejuvenation in a serene and tranquil environment. From the moment you step in, you'll be greeted with a warm and friendly welcome, and the calming aroma of essential oils. Your Spa offers a range of luxurious treatments, including massages, facials, and body scrubs, all of which are designed to nourish and revitalize your body and mind. The spa also features a sauna and a steam room, perfect for unwinding and detoxing. With its soothing atmosphere and top-notch services, your Spa is the ultimate destination for self-care and pampering.</p>
+            </div>
+        </div>
+    
+</div>
+<div class="reserv">
+    <p class="bef">Reserve : <a class="allo" href="tel:tel+212626151631"><span>here</span></a></p>
+</div>
+<footer>
+    <div class="container-fluid">
+            <div class="logor"><img src="logor.png" width="150px"></div>
+            <h1 class="footr">Waiting For Your Visit</h1>
+            <p class="infos">Important Informations :</p>
+            <div class="alll">
+              <div class="Horaire"><p class="rol"><i class="fa-regular fa-clock fa-shake"></i> From **:** To **:**</p></div>
+              <div class="loc l"><p class="rol"><i class="fa-solid fa-location-dot fa-beat-fade"></i> Rue ******** N° **</p></div>
+              <div class="mail l"><p class="rol"><i class="fa-regular fa-envelope fa-bounce"></i> ContactEx@gmail.com</p></div>
+              <div class="phone l"><p class="rol"><i class="fa-solid fa-phone fa-shake"></i>+2125********</p></div>
+            </div>
+          <div class="mimi">
+            <div class="allll">
+              <div class="lol">
+              <div class="Horaire"><p class="rol"><i class="fa-regular fa-clock fa-shake"></i> From **:** To **:**</p></div>
+              <div class="loc"><p class="rol"><i class="fa-solid fa-location-dot fa-beat-fade"></i> Rue ******** N° **</p></div>
+            </div>
+            <div class="lolo">
+              <div class="mail"><p class="rol"><i class="fa-regular fa-envelope fa-bounce"></i> ContactEx@gmail.com</p></div>
+              
+            <div class="phone"><p class="rol"><i class="fa-solid fa-phone fa-shake"></i>+2125********</p></div>
+            </div>
+          </div>
+          </div>
+          
+          
+            <p class="rol f"><i class="fa-regular fa-clock fa-shake"></i> From **:** To **:**</p>
+            <p class="rol f"><i class="fa-solid fa-location-dot fa-beat-fade"></i> Rue ******** N° **</p>
+            <p class="rol f"><i class="fa-regular fa-envelope fa-bounce"></i> ContactEx@gmail.com</p>
+            <p class="rol f"><i class="fa-solid fa-phone fa-shake"></i>+2125********</p><br><br><br>
+          <div class="lon"></div>
+            <p class="copy">2025 <a href="#" target="_blank">Miro</a> Copyright © all rights reserved</p>
+          <br>
+        </div>
+        </footer>
+</body>
+</html>
